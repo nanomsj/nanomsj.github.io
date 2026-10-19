@@ -1,0 +1,38 @@
+#skills {
+  background-color: $navy;
+  padding: 10rem 0;
+}
+
+.skill-card {
+  background-color: $light-navy;
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    border-color: rgba(100, 255, 218, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  &__icon {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    color: $dark-blue-text;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    color: $dark-grey;
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+}

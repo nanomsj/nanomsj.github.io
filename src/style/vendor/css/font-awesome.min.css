@@ -1,0 +1,13 @@
+#www-app-toolbar {
+  display: none;
+}
+
+/* Icon when not clicked */
+.fa-play {
+  display: none;
+}
+
+/* Icon when clicked */
+.fa-play.active {
+  display: inline;
+}

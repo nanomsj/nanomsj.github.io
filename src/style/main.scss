@@ -1,0 +1,36 @@
+// Vendor
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/helpers';
+
+// Base
+@import 'base/base';
+@import 'base/typography';
+
+// Layout
+@import 'layout/sections';
+@import 'layout/footer';
+
+// Sections
+@import 'sections/about';
+@import 'sections/timeline';
+@import 'sections/projects';
+@import 'sections/contact';
+
+// Returning to the homepage in the same session (e.g. "Back to homepage"
+// from /solutions/ or the browser back button): show everything statically,
+// skip the entrance animations entirely.
+html.no-anim .react-reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: none !important;
+}
+@import 'sections/solutions';
+
+// Components
+@import 'components/buttons';
+@import 'components/navbar';

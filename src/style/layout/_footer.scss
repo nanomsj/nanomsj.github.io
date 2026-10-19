@@ -1,0 +1,41 @@
+footer {
+  background-color: $navy;
+  padding: 3rem 0;
+  text-align: center;
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    a {
+      color: $dark-grey;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      i {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__copyright {
+    color: $dark-grey;
+    font-size: 1.2rem;
+
+    a {
+      color: $primary-color;
+    }
+  }
+}
+
+.github-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

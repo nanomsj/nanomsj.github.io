@@ -1,0 +1,183 @@
+#education,
+#experience,
+#leadership {
+  background-color: $navy;
+  padding: 10rem 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    opacity: 0.3;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    left: 13px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    border: 3px solid $navy;
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.3);
+  }
+
+  &__content {
+    background-color: $light-navy;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__school {
+    color: $dark-blue-text;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__period {
+    color: $primary-color;
+    font-size: 1.3rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__dept {
+    color: $primary-color;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__degree {
+    color: $primary-color;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: $primary-color;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: 1px solid $primary-color;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $navy;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  &__school-link,
+  &__dept-link,
+  &__detail-link {
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__detail-link {
+    .icon-external {
+      margin-left: 0.5rem;
+      vertical-align: -1px;
+    }
+  }
+
+  &__details {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: $dark-grey;
+      font-size: 1.4rem;
+      line-height: 1.6;
+
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: $primary-color;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .timeline {
+    &__header {
+      flex-direction: column;
+    }
+
+    &__content {
+      padding: 2rem;
+    }
+  }
+}
