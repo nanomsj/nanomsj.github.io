@@ -6,9 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: "pages"
@@ -32,3 +30,20 @@ jobs:
         run: npm ci --no-audit --no-fund --legacy-peer-deps --registry=https://registry.npmjs.org --replace-registry-host=always
       - name: Verify sharp
         run: node -e "const s=require('sharp'); console.log('sharp OK', s.versions)"
+      - name: Build site
+        run: |
+          npm run build 2>&1 | tee /tmp/build.log
+          exit ${PIPESTATUS[0]}
+      - name: Publish build log
+        if: always()
+        run: |
+          mkdir /tmp/logrepo && cd /tmp/logrepo
+          git init -q
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git fetch -q --depth=1 origin ci-logs || true
+          git checkout -q -B ci-logs FETCH_HEAD 2>/dev/null || git checkout -q -B ci-logs
+          cp /tmp/build.log ./build.log
+          echo "workflow_sha: ${{ github.sha }}" >> ./build.log
+          git add build.log
+          git -c user.name=ci -c user.email=ci@github.com commit -q -m "build log" || true
+          git push -q -f origin HEAD:ci-logs
