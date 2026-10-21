@@ -8,9 +8,9 @@ Built with [Gatsby](https://www.gatsbyjs.com/).
 
 26.09 First version
 
-26.10.20 updated page layout
+26.10.20 Updated page layout
 
-
+26.10.21 Add auto deploy
 
 ## Special Thanks
 
