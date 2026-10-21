@@ -2,29 +2,29 @@
 > gatsby-simplefolio@1.0.0 build
 > gatsby build --prefix-paths
 
-success open and validate gatsby-configs, load plugins - 0.196s
+success open and validate gatsby-configs, load plugins - 0.189s
 success onPreInit - 0.002s
 success initialize cache - 0.026s
-success copy gatsby files - 0.042s
-success Compiling Gatsby Functions - 0.202s
-success onPreBootstrap - 0.207s
+success copy gatsby files - 0.036s
+success Compiling Gatsby Functions - 0.203s
+success onPreBootstrap - 0.208s
 success createSchemaCustomization - 0.003s
 success Checking for changed pages - 0.000s
 success source and transform nodes - 0.049s
-success building schema - 0.301s
+success building schema - 0.361s
 success createPages - 0.000s
-success createPagesStatefully - 0.038s
+success createPagesStatefully - 0.048s
 info Total nodes: 42, SitePage nodes: 2 (use --verbose for breakdown)
 success Checking for changed pages - 0.000s
-success update schema - 0.052s
+success update schema - 0.044s
 success onPreExtractQueries - 0.000s
-success extract queries from components - 0.246s
+success extract queries from components - 0.223s
 success write out redirect data - 0.001s
 success onPostBootstrap - 0.000s
-info bootstrap finished - 2.637s
+info bootstrap finished - 2.627s
 warning [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch to "gatsby-plugin-image" for better performance and a simpler API. See https://gatsby.dev/migrate-images to learn how.
-success run static queries - 0.074s - 1/1 13.49/s
-success run page queries - 0.001s - 2/2 2404.01/s
+success run static queries - 0.060s - 1/1 16.62/s
+success run page queries - 0.001s - 2/2 2120.26/s
 success write out requires - 0.003s
 warning `isModuleDeclaration` has been deprecated, please migrate to `isImportOrExportDeclaration`
     at isModuleDeclaration (/home/runner/work/nanomsj.github.io/nanomsj.github.io/node_modules/@babel/types/lib/validators/generated/index.js:2793:35)
@@ -35,13 +35,13 @@ warning ./.cache/gatsby-browser-entry.js
 Attempted import error: 'push' is not exported from 'gatsby-link' (imported as 'push').
 warning ./.cache/gatsby-browser-entry.js
 Attempted import error: 'replace' is not exported from 'gatsby-link' (imported as 'replace').
-success Building production JavaScript and CSS bundles - 5.325s
-success Rewriting compilation hashes - 0.009s
-success Writing page-data.json files to public directory - 0.026s - 2/2 75.91/s
-success Building HTML renderer - 0.763s
-success Building static HTML for pages - 0.042s - 2/2 47.45/s
+success Building production JavaScript and CSS bundles - 4.993s
+success Rewriting compilation hashes - 0.004s
+success Writing page-data.json files to public directory - 0.004s - 2/2 469.86/s
+success Building HTML renderer - 0.701s
+success Building static HTML for pages - 0.049s - 2/2 40.53/s
 success onPostBuild - 0.000s
-success Caching JavaScript and CSS webpack compilation - 6.809s
-success Caching HTML renderer compilation - 5.926s
-info Done building in 14.874306872 sec
-workflow_sha: ec26f6b520021133b90d7d58c2d0eb8a0332536d
+success Caching JavaScript and CSS webpack compilation - 6.464s
+success Caching HTML renderer compilation - 5.711s
+info Done building in 14.137516476 sec
+workflow_sha: ff71a932a8ebfff22642e7c194a2cf15c1fca71b
