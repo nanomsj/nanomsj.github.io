@@ -2,7 +2,7 @@
 
 This is my homepage: https://nanomsj.github.io
 
-Built with [Gatsby](https://www.gatsbyjs.com/).
+Built with [Gatsby](https://www.gatsbyjs.com/)
 
 ## Updates
 
@@ -15,6 +15,7 @@ Built with [Gatsby](https://www.gatsbyjs.com/).
 ## Special Thanks
 
 - [bchiang7/v4](https://github.com/bchiang7/v4) — this site uses its color scheme
+- I use @xiaomi MiMo-V2.6-Flash to help with coding
 
 ## License
 
