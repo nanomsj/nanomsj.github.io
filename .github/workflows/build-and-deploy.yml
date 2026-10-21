@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,8 +26,12 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
+      - name: Show environment
+        run: node -v && npm -v
       - name: Install dependencies
         run: npm ci --no-audit --no-fund --legacy-peer-deps --registry=https://registry.npmjs.org --replace-registry-host=always
+      - name: Verify sharp
+        run: node -e "const s=require('sharp'); console.log('sharp OK', s.versions)"
       - name: Build site
         run: npm run build
       - name: Upload Pages artifact
@@ -36,6 +41,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
