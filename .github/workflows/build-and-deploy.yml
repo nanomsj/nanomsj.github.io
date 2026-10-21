@@ -49,7 +49,21 @@ jobs:
           git add build.log
           git -c user.name=ci -c user.email=ci@github.com commit -q -m "build log" || true
           git push -q -f origin HEAD:ci-logs
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'public'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

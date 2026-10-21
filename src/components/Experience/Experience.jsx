@@ -30,8 +30,8 @@ const Experience = () => {
                   </div>
                   <p className="timeline__dept">{item.role}</p>
                   <ul className="timeline__details">
-                    {item.details.map((d, i) => (
-                      <li key={i}>
+                    {item.details.map((d) => (
+                      <li key={typeof d === 'string' ? d : d.text}>
                         {typeof d === 'string' ? (
                           d
                         ) : (

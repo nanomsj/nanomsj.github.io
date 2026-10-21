@@ -88,8 +88,8 @@ const Education = () => {
                   )}
                   {item.details && item.details.length > 0 && (
                     <ul className="timeline__details">
-                      {item.details.map((d, i) => (
-                        <li key={i}>{d}</li>
+                      {item.details.map((d) => (
+                        <li key={d}>{d}</li>
                       ))}
                     </ul>
                   )}
