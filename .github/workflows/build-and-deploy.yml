@@ -32,20 +32,3 @@ jobs:
         run: npm ci --no-audit --no-fund --legacy-peer-deps --registry=https://registry.npmjs.org --replace-registry-host=always
       - name: Verify sharp
         run: node -e "const s=require('sharp'); console.log('sharp OK', s.versions)"
-      - name: Build site
-        run: npm run build
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'public'
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
