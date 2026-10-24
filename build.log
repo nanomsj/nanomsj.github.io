@@ -2,30 +2,30 @@
 > gatsby-simplefolio@1.0.0 build
 > gatsby build --prefix-paths
 
-success open and validate gatsby-configs, load plugins - 0.226s
+success open and validate gatsby-configs, load plugins - 0.261s
 success onPreInit - 0.003s
-success initialize cache - 0.030s
-success copy gatsby files - 0.058s
-success Compiling Gatsby Functions - 0.239s
-success onPreBootstrap - 0.246s
-success createSchemaCustomization - 0.003s
+success initialize cache - 0.032s
+success copy gatsby files - 0.101s
+success Compiling Gatsby Functions - 0.457s
+success onPreBootstrap - 0.463s
+success createSchemaCustomization - 0.004s
 success Checking for changed pages - 0.000s
-success source and transform nodes - 0.049s
-success building schema - 0.401s
+success source and transform nodes - 0.057s
+success building schema - 0.333s
 success createPages - 0.000s
-success createPagesStatefully - 0.045s
+success createPagesStatefully - 0.042s
 info Total nodes: 38, SitePage nodes: 2 (use --verbose for breakdown)
 success Checking for changed pages - 0.000s
-success update schema - 0.050s
+success update schema - 0.045s
 success onPreExtractQueries - 0.000s
-success extract queries from components - 0.300s
+success extract queries from components - 0.274s
 success write out redirect data - 0.001s
-success onPostBootstrap - 0.000s
-info bootstrap finished - 2.895s
+success onPostBootstrap - 0.001s
+info bootstrap finished - 3.161s
 warning [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch to "gatsby-plugin-image" for better performance and a simpler API. See https://gatsby.dev/migrate-images to learn how.
-success run static queries - 0.111s - 1/1 8.98/s
-success run page queries - 0.001s - 2/2 2196.31/s
-success write out requires - 0.008s
+success run static queries - 0.077s - 1/1 12.93/s
+success run page queries - 0.001s - 2/2 2102.70/s
+success write out requires - 0.005s
 warning `isModuleDeclaration` has been deprecated, please migrate to `isImportOrExportDeclaration`
     at isModuleDeclaration (/home/runner/work/nanomsj.github.io/nanomsj.github.io/node_modules/@babel/types/lib/validators/generated/index.js:2793:35)
     at PluginPass.Program (/home/runner/work/nanomsj.github.io/nanomsj.github.io/node_modules/babel-plugin-lodash/lib/index.js:102:44)
@@ -35,13 +35,13 @@ warning ./.cache/gatsby-browser-entry.js
 Attempted import error: 'push' is not exported from 'gatsby-link' (imported as 'push').
 warning ./.cache/gatsby-browser-entry.js
 Attempted import error: 'replace' is not exported from 'gatsby-link' (imported as 'replace').
-success Building production JavaScript and CSS bundles - 5.887s
-success Rewriting compilation hashes - 0.015s
-success Writing page-data.json files to public directory - 0.024s - 2/2 84.67/s
-success Building HTML renderer - 0.872s
-success Building static HTML for pages - 0.065s - 2/2 30.88/s
+success Building production JavaScript and CSS bundles - 5.973s
+success Rewriting compilation hashes - 0.005s
+success Writing page-data.json files to public directory - 0.006s - 2/2 331.42/s
+success Building HTML renderer - 0.843s
+success Building static HTML for pages - 0.047s - 2/2 42.61/s
 success onPostBuild - 0.000s
-success Caching JavaScript and CSS webpack compilation - 9.705s
-success Caching HTML renderer compilation - 8.707s
-info Done building in 18.637056273 sec
-workflow_sha: 903e7a86925f9e81f0326a38140042a8df052d92
+success Caching JavaScript and CSS webpack compilation - 9.504s
+success Caching HTML renderer compilation - 8.676s
+info Done building in 18.790629288 sec
+workflow_sha: 2792adfce59b7d620d1bcc7c256a39b4f8a9c314
