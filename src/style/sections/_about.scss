@@ -78,7 +78,7 @@
         animation: about-dot-pulse 1.6s ease-out infinite;
       }
 
-      &:hover &__dot {
+      &:hover .about-img__dot {
         opacity: 1;
       }
     }
