@@ -54,6 +54,27 @@
   margin: 3rem 0 4rem;
 }
 
+.blog-category {
+  margin-top: 3rem;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.blog-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 2.5rem;
+  border-radius: 8px;
+}
+
+.blog-acknowledgment {
+  margin: 1.5rem 0 0;
+}
+
 .blog-body {
   margin: 2rem 0 0;
   color: $dark-blue-text;

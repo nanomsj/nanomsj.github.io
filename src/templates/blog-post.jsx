@@ -12,12 +12,14 @@ const BlogPost = ({ pageContext: { post }, location }) => (
     <BlogLink className="timeline__link" to="/blog/" isBack returnTo={location.state?.blogReturn}>
       {location.state?.blogReturn?.url.startsWith('/blog/') === false ? '← Home' : '← All posts'}
     </BlogLink>
-    <article className="blog-article">
+    <article className="blog-article" lang={post.lang}>
       <h1>{post.title}</h1>
       <time className="timeline__period" dateTime={post.date}>
         {post.date}
       </time>
       <p className="blog-body">{post.body.join('\n\n')}</p>
+      {post.image && <img className="blog-photo" src={post.image} alt={post.imageAlt} />}
+      {post.acknowledgment && <p className="blog-acknowledgment">{post.acknowledgment}</p>}
     </article>
     <PostComments path={`/blog/${post.slug}/`} />
   </main>
@@ -30,6 +32,10 @@ BlogPost.propTypes = {
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
       body: PropTypes.arrayOf(PropTypes.string).isRequired,
+      lang: PropTypes.string,
+      image: PropTypes.string,
+      imageAlt: PropTypes.string,
+      acknowledgment: PropTypes.string,
     }).isRequired,
   }).isRequired,
 };
