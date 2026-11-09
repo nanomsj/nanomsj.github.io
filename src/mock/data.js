@@ -42,7 +42,6 @@ export const educationData = [
     ],
     details: [],
     coursework: 'https://github.com/nanomsj/msj-in-PKU',
-    solutions: '/solutions/',
   },
   {
     id: uuidv4(),

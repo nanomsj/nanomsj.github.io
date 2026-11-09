@@ -68,7 +68,7 @@ const Education = () => {
                       )}
                     </p>
                   )}
-                  {(item.coursework || item.solutions) && (
+                  {item.coursework && (
                     <div className="timeline__actions">
                       {item.coursework && (
                         <a
@@ -77,11 +77,6 @@ const Education = () => {
                           rel="noopener noreferrer"
                           className="timeline__link">
                           Course Materials
-                        </a>
-                      )}
-                      {item.solutions && (
-                        <a href={item.solutions} className="timeline__link">
-                          Textbook Solutions
                         </a>
                       )}
                     </div>

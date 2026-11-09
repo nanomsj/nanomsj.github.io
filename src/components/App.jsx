@@ -7,6 +7,7 @@ import Experience from '../components/Experience/Experience';
 import Projects from '../components/Projects/Projects';
 // import Awards from '../components/Awards/Awards';
 // import Skills from '../components/Skills/Skills';
+import Blog from './Blog/Blog';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 
@@ -19,6 +20,7 @@ const App = () => (
     <Projects />
     {/* <Awards /> */}
     {/* <Skills /> */}
+    <Blog />
     <Contact />
     <Footer />
   </PortfolioProvider>

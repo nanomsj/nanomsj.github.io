@@ -1,0 +1,122 @@
+.blog-column {
+  width: min(80rem, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+.blog-list {
+  margin-bottom: 2.5rem;
+  padding: 0;
+  text-align: left;
+
+  .timeline__item {
+    margin-bottom: 1.8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    padding: 1.6rem 2.5rem;
+
+    &:hover,
+    &:focus-visible {
+      .timeline__school {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+#blog .blog-column {
+  text-align: center;
+}
+
+.blog-page {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.8rem, 5vw, 4rem);
+  }
+
+  > h1 {
+    margin: 2.5rem 0;
+  }
+}
+
+.blog-article {
+  margin: 3rem 0 4rem;
+}
+
+.blog-panel {
+  margin-top: 2.5rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: $light-navy;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-body {
+  margin: 2rem 0 0;
+  color: $dark-blue-text;
+  font-size: 1.8rem;
+  line-height: 1.85;
+  white-space: pre-line;
+}
+
+.blog-comments {
+  --waline-font-size: 1.5rem;
+  --waline-white: #{$navy};
+  --waline-color: #{$dark-blue-text};
+  --waline-theme-color: #{$primary-color};
+  --waline-active-color: #{$secondary-color};
+  --waline-bg-color: #{$navy};
+  --waline-bg-color-light: #{$light-navy};
+  --waline-bg-color-hover: #{$light-navy};
+  --waline-border-color: #{rgba($dark-grey, 0.4)};
+  --waline-info-bg-color: #{$navy};
+  --waline-info-color: #{$dark-grey};
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  &__preview {
+    display: grid;
+    gap: 0.8rem;
+
+    label {
+      display: grid;
+      gap: 0.4rem;
+      margin: 0;
+      color: $dark-blue-text;
+    }
+
+    input,
+    textarea {
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--waline-border-color);
+      border-radius: 4px;
+      background: $navy;
+    }
+
+    button {
+      justify-self: end;
+      background: transparent;
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar__links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}

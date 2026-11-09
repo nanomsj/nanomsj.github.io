@@ -21,7 +21,7 @@
 @import 'sections/contact';
 
 // Returning to the homepage in the same session (e.g. "Back to homepage"
-// from /solutions/ or the browser back button): show everything statically,
+// from the blog or the browser back button): show everything statically,
 // skip the entrance animations entirely.
 html.no-anim .react-reveal {
   opacity: 1 !important;
@@ -29,7 +29,7 @@ html.no-anim .react-reveal {
   transform: none !important;
   transition: none !important;
 }
-@import 'sections/solutions';
+@import 'sections/blog';
 
 // Components
 @import 'components/buttons';

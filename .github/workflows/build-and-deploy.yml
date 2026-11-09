@@ -33,6 +33,8 @@ jobs:
       - name: Verify sharp
         run: node -e "const s=require('sharp'); console.log('sharp OK', s.versions)"
       - name: Build site
+        env:
+          GATSBY_WALINE_SERVER_URL: ${{ vars.GATSBY_WALINE_SERVER_URL }}
         run: |
           npm run build 2>&1 | tee /tmp/build.log
           exit ${PIPESTATUS[0]}
