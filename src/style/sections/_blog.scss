@@ -54,14 +54,6 @@
   margin: 3rem 0 4rem;
 }
 
-.blog-panel {
-  margin-top: 2.5rem;
-  padding: clamp(2rem, 5vw, 4rem);
-  background: $light-navy;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-
 .blog-body {
   margin: 2rem 0 0;
   color: $dark-blue-text;
@@ -83,8 +75,68 @@
   --waline-info-bg-color: #{$navy};
   --waline-info-color: #{$dark-grey};
 
+  padding: 2rem 0 0;
+  border-top: 1px solid rgba($dark-grey, 0.25);
+
   h2 {
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
+  }
+
+  .wl-comment-actions button:not(.wl-reply),
+  .wl-sort,
+  .wl-meta .wl-browser,
+  .wl-meta .wl-os,
+  .wl-user-avatar,
+  .wl-action[title='Emoji'] {
+    display: none;
+  }
+
+  .wl-user::before {
+    content: '';
+    display: block;
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 1px solid var(--waline-border-color);
+    border-radius: 50%;
+    background: $light-navy;
+  }
+
+  .wl-action[aria-label='Markdown is supported'] {
+    width: auto;
+    padding-inline: 0.4rem;
+    color: $dark-grey;
+    font-size: 1.2rem;
+    white-space: nowrap;
+
+    svg {
+      display: none;
+    }
+
+    &::after {
+      content: 'Markdown';
+    }
+  }
+
+  .wl-action[title='Preview'] {
+    svg {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-color: currentColor;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'%3E%3Cpath d='M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12Z'/%3E%3Ccircle cx='12' cy='12' r='2.5'/%3E%3C/svg%3E")
+        center / contain no-repeat;
+    }
+  }
+
+  .wl-power a,
+  .wl-power a:hover {
+    color: inherit;
   }
 
   &__preview {

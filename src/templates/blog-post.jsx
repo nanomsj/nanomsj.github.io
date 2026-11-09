@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import PostComments from '../components/Blog/PostComments';
+import BlogLink from '../components/Blog/BlogLink';
 
-const BlogPost = ({ pageContext: { post } }) => (
+const BlogPost = ({ pageContext: { post }, location }) => (
   <main className="blog-column blog-page">
     <Helmet>
       <title>{`${post.title} · Shijia Min`}</title>
     </Helmet>
-    <Link className="timeline__link" to="/blog/">
-      ← All posts
-    </Link>
+    <BlogLink className="timeline__link" to="/blog/" isBack returnTo={location.state?.blogReturn}>
+      {location.state?.blogReturn?.url.startsWith('/blog/') === false ? '← Home' : '← All posts'}
+    </BlogLink>
     <article className="blog-article">
       <h1>{post.title}</h1>
       <time className="timeline__period" dateTime={post.date}>

@@ -28,6 +28,9 @@ const PostComments = ({ path }) => {
           login: 'disable',
           meta: ['nick'],
           requiredMeta: [],
+          commentSorting: 'latest',
+          noRss: true,
+          search: false,
           locale: { nick: 'Nickname (optional)', placeholder: 'Leave a comment' },
           emoji: false,
           imageUploader: false,
@@ -47,7 +50,7 @@ const PostComments = ({ path }) => {
   if (!serverURL && !isPreview) return null;
 
   return (
-    <section className="blog-panel blog-comments" aria-labelledby="comments-title">
+    <section className="blog-comments" aria-labelledby="comments-title">
       <h2 id="comments-title">Comments</h2>
       {serverURL ? (
         <>

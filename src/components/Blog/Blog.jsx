@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Title from '../Title/Title';
+import BlogLink from './BlogLink';
 import PostList from './PostList';
 
 const Blog = () => (
@@ -8,9 +8,9 @@ const Blog = () => (
     <Title title="Blog" />
     <div className="blog-column">
       <PostList limit={3} />
-      <Link className="timeline__link" to="/blog/">
+      <BlogLink className="timeline__link" to="/blog/">
         All posts →
-      </Link>
+      </BlogLink>
     </div>
   </section>
 );

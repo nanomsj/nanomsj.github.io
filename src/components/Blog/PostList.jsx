@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import posts from '../../mock/blogPosts';
+import BlogLink from './BlogLink';
 
 const PostList = ({ limit }) => (
   <ul className="timeline blog-list">
     {posts.slice(0, limit).map(({ slug, date, title }) => (
       <li className="timeline__item" key={slug}>
         <span className="timeline__dot" aria-hidden="true" />
-        <Link className="timeline__content blog-list__entry" to={`/blog/${slug}/`}>
+        <BlogLink className="timeline__content blog-list__entry" to={`/blog/${slug}/`}>
           <span className="timeline__school">{title}</span>
           <time className="timeline__period" dateTime={date}>
             {date}
           </time>
-        </Link>
+        </BlogLink>
       </li>
     ))}
   </ul>
